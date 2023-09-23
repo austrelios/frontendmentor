@@ -14,7 +14,7 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 --blue: hsl(228, 45%, 44%);
---container_background_color: rgba(153, 235, 235, 1) 80%;
+--container_background_color: #e7f7fc;
 --white: white;
 
 /* ### Body Copy */
