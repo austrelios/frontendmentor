@@ -1,0 +1,233 @@
+:root {
+/* ## Colors
+   ### Primary */
+
+/* --linear_gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%); */
+
+/* ### Neutral */
+--very_light_grayish_blue: hsl(240, 78%, 98%);
+--light_grayish_blue: hsl(234, 14%, 74%);
+--grayish_blue: hsl(233, 13%, 49%);
+--dark_grayish_blue: hsl(232, 13%, 33%);
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+--blue: hsl(228, 45%, 44%);
+--container_background_color: rgba(153, 235, 235, 1) 80%;
+--white: white;
+
+/* ### Body Copy */
+
+--font_size: 15px;
+
+/* ### Font
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weight: 700
+*/
+
+--mobile: 375px;
+--desktop: 1440px;
+
+}
+
+body {
+   background-color: var(--light_grayish_blue);
+   font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+   border-top: 1px solid var(--light_grayish_blue);
+}
+
+.main_container {
+   display: block;
+   background-color: var(--container_background_color);
+   width: 40rem;
+   text-align: center;
+   padding: 2rem;
+}
+
+.pricing_header {
+   display: block;
+}
+
+.our_pricing_text {
+   font-size: 1.5rem;
+   color: var(--dark_grayish_blue);
+}
+
+.annual_monthly_toggle {
+   color: var(--dark_grayish_blue);
+}
+
+.plans_container {
+   display: flex;
+   /* align-items: center; */
+   margin-top: 2rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   margin-bottom: 2rem;
+}
+
+.basic_plan, .master_plan, .professional_plan {
+   padding: 2rem 1rem 2rem 1rem;
+   width: 10rem; 
+}
+
+.basic_plan, .master_plan {
+  background-color: var(--white);
+  color: var(--dark_grayish_blue);
+  margin-top: 1rem;
+  height: 20rem;
+}
+
+.basic_plan {
+   border-radius: 15px 0 0 15px;
+}
+
+.master_plan {
+   border-radius: 0 15px 15px 0;
+}
+
+.professional_plan {
+   padding-top: 3rem;
+   border-radius: 15px;
+   background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+   color: var(--very_light_grayish_blue);
+   height: 22rem
+}
+
+
+
+.price {
+   font-size: 2.5rem;
+   font-weight: bolder;
+}
+
+.learn_more_button {
+      border: 1px solid var(--light_grayish_blue);
+      border-radius: 5px;
+      padding: 14px 14px;
+      font-size: 16px;
+      cursor: pointer;
+}
+
+.basic_plan .learn_more_button, .master_plan .learn_more_button {
+   background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+   color: var(--very_light_grayish_blue);
+}
+.basic_plan .learn_more_button:hover, .master_plan .learn_more_button:hover {
+   background-image: var(--very_light_grayish_blue);
+   color: var(--blue);
+}
+
+.professional_plan .learn_more_button {
+   background-color: var(--very_light_grayish_blue);
+   color: var(--blue);
+}
+.professional_plan .learn_more_button:hover {
+   background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+   color: var(--very_light_grayish_blue);
+}
+
+.annual_monthly_toggle {
+   justify-content: center;
+}
+
+
+.toggle-switch {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.toggle-switch span {
+   padding-left: 1rem;
+   padding-right: 1rem
+}
+
+
+/* Toggle switch */
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+ }
+ 
+ .switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+ }
+ 
+ .slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+   -webkit-transition: 0.4s;
+ 
+   box-shadow: 2px 6px 25px #1e2321;
+   transform: translate(0px, 0px);
+   transition: 0.6s ease transform, 0.6s box-shadow;
+ }
+ 
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+ }
+ 
+ input:checked + .slider {
+   background-color: var(--light_grayish_blue);
+ }
+ 
+ input:focus + .slider {
+   box-shadow: 0 0 1px var(--light_grayish_blue);
+ }
+ 
+ input:checked + .slider:before {
+   -webkit-transform: translateX(26px);
+   -ms-transform: translateX(26px);
+   transform: translateX(26px);
+ }
+ 
+ .slider.round {
+   border-radius: 34px;
+ }
+ 
+ .slider.round:before {
+   border-radius: 50%;
+ }
+
+
+ @media only screen and (max-width: 600px) {
+   .main_container {
+      display: block;
+      text-align: center;
+      width: 20rem;
+      padding: 2rem;
+   }
+
+   .plans_container {
+      display: block;
+   }
+  
+   .basic_plan, .professional_plan, .master_plan {
+      margin: 2rem;
+      border-radius: 15px;
+   }
+   
+
+ }
